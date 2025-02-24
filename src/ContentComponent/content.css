@@ -1,0 +1,11 @@
+.content {
+  display: flex;
+  justify-content: center;
+  padding: 0 43px;
+}
+
+/* .grid-gap {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+} */

@@ -1,0 +1,13 @@
+.content-view-more-link {
+  display: flex;
+  text-decoration: none;
+  color: #0074bd;
+  font-size: 1.4rem;
+  align-items: center;
+}
+
+.content-view-more img {
+  height: 15px;
+  object-fit: contain;
+  margin-left: 8px;
+}

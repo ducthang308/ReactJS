@@ -1,0 +1,21 @@
+.image-list {
+  display: flex;
+  gap: 4px;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.image-list-item {
+  list-style: none;
+  display: flex;
+  gap: 4px;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.image-list-item img {
+  width: 100%;
+  max-width: 201px;
+  height: 150px;
+  object-fit: contain;
+}

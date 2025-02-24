@@ -1,0 +1,11 @@
+.how-do-question-different-text {
+  display: flex;
+  background-color: #636363;
+  gap: 6px;
+  padding: 8px 14px 10px 18px;
+}
+
+.how-do-question-different-text {
+  font-size: 1.4rem;
+  color: #ffffff;
+}

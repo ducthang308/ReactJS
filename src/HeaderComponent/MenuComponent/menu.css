@@ -1,0 +1,12 @@
+.header-menu {
+  color: #ffffff;
+  margin-left: 16px;
+  font-size: 1.6rem;
+  display: flex;
+  gap: 24px;
+}
+
+.header-menu__icon:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
