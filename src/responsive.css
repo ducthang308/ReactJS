@@ -23,6 +23,9 @@
     padding: 16px;
     border-radius: 2px;
   }
+  .content {
+    margin: 0 20px;
+  }
 }
 
 @media screen and (max-width: 767.98px) {
@@ -48,6 +51,9 @@
   }
   .header-search {
     display: none;
+  }
+  .document-content {
+    margin-bottom: 40px;
   }
 }
 

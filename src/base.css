@@ -9,11 +9,12 @@ img {
 }
 
 @font-face {
-  font-family: "Segoe UI";
-  src: url("path-to-font/segoeui.ttf") format("truetype"),
-    url("path-to-font/segoeui.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+  font-family: "Open Sans";
+  src: url("/fonts/OpenSans-Regular.ttf") format("truetype");
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
 }
 
 html {
