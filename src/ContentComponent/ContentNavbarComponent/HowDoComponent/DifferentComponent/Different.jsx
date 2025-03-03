@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./index.css";
 
-const Different = () => {
+const Different = ({ text }) => {
+  const [isActive, setActive] = useState(false);
+
+  const toggleQuestion = () => {
+    setIsActive((prev) => !prev);
+  };
   return (
     <div class="how-do-question-different-text">
       <p>A:</p>

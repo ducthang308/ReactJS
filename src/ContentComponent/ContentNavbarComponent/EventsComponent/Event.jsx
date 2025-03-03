@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import View from "../../ViewMoreComponent/View";
 import clock from "../../../assets/img/clock.png";
 import "./index.css";
@@ -32,14 +32,38 @@ const events = [
     time: "09:00 AM - 09:30 AM",
     image: clock,
   },
+  {
+    date: "05",
+    month: "Jan",
+    title: "IT Maintenance",
+    time: "09:00 AM - 09:30 AM",
+    image: clock,
+  },
+  {
+    date: "06",
+    month: "Jan",
+    title: "IT Maintenance",
+    time: "09:00 AM - 09:30 AM",
+    image: clock,
+  },
 ];
 
 const Event = () => {
+  const INIT = 4;
+  const [visibleItems, setVisibleItems] = useState(INIT);
+
+  const view = () => {
+    if (visibleItems < events.length) {
+      setVisibleItems((prev) => prev + INIT);
+    } else {
+      setVisibleItems(INIT);
+    }
+  };
   return (
     <div class="content-navbar-events">
       <h1 class="content-heading">Events</h1>
 
-      {events.map((item) => (
+      {events.slice(0, visibleItems).map((item) => (
         <div class="content-navbar-box-grid">
           <div class="content-navbar-events-box">
             <div class="content-navbar-box-month">
@@ -57,8 +81,10 @@ const Event = () => {
           </div>
         </div>
       ))}
-
-      <View></View>
+      <View
+        onClick={view}
+        text={visibleItems < events.length ? "View More" : "View Less"}
+      />
     </div>
   );
 };

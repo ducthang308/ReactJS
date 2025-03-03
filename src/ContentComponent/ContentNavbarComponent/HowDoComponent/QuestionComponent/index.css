@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
 }
 .how-do-img {
   height: 15px;
@@ -26,4 +27,19 @@
 
 .how-do-question--active img {
   transform: rotate(90deg);
+}
+
+.how-do-question.active {
+  background-color: #5ec3a3;
+}
+
+.how-do-img {
+  margin-right: 10px;
+}
+
+.question-answer {
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  margin-top: 5px;
 }

@@ -4,6 +4,7 @@
   color: #0074bd;
   font-size: 1.4rem;
   align-items: center;
+  cursor: pointer;
 }
 
 .content-view-more img {

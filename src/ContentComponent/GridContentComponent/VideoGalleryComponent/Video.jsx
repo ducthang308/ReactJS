@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./video.css";
 import View from "../../ViewMoreComponent/View";
 import vd from "../../../assets/img/video.png";
@@ -19,16 +19,38 @@ const videos = [
   {
     image: vd3,
   },
+  {
+    image: vd,
+  },
+  {
+    image: vd1,
+  },
+  {
+    image: vd2,
+  },
+  {
+    image: vd3,
+  },
 ];
 
 const Video = () => {
+  const INIT = 4;
+  const [visibleItems, setVisibleItems] = useState(INIT);
+
+  const view = () => {
+    if (visibleItems < videos.length) {
+      setVisibleItems((prev) => prev + INIT);
+    } else {
+      setVisibleItems(INIT);
+    }
+  };
   return (
     <div class="content-announcement">
       <h1 class="content-heading">Video Gallery</h1>
 
       <div class="image-list">
         <ul class="image-list-item">
-          {videos.map((item) => (
+          {videos.slice(0, visibleItems).map((item) => (
             <li class="image-list-item-position">
               <img src={item.image} alt="" />
               <i class="fa-solid fa-play image-list-item-position__absolute"></i>
@@ -37,7 +59,10 @@ const Video = () => {
         </ul>
       </div>
 
-      <View></View>
+      <View
+        onClick={view}
+        text={visibleItems < videos.length ? "View More" : "View Less"}
+      ></View>
     </div>
   );
 };
