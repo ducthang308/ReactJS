@@ -55,6 +55,12 @@
   .document-content {
     margin-bottom: 40px;
   }
+  .image-list {
+    flex-direction: column;
+  }
+  .image-list-item {
+    flex-direction: column;
+  }
 }
 
 /* Tablet */
